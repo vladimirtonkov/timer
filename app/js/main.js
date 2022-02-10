@@ -104,19 +104,20 @@ function outer() {
       let C = +timeNumber[2].textContent
       console.log('timeNumber', C)
       let index = C;
-
-      let interval = setInterval(() => {
-        index--
-        if (index === 0) {
-          clearInterval(interval)
-        }
-        if (index >= 10) {
-          showModalEditTimer.children[2].innerHTML = index;
-        } else {
-          showModalEditTimer.children[2].innerHTML = '0' + index;
-        }
-        console.log('index', index)
-      }, 1000)
+      if (H > 0 || M > 0 || C > 0) {
+        let interval = setInterval(() => {
+          index--
+          if (index === 0) {
+            clearInterval(interval)
+          }
+          if (index >= 10) {
+            showModalEditTimer.children[2].innerHTML = index;
+          } else {
+            showModalEditTimer.children[2].innerHTML = '0' + index;
+          }
+          console.log('index', index)
+        }, 1000)
+      }
     })
   }
 
