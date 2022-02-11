@@ -22,7 +22,7 @@
         <div class="timer__inner">
           <div class="timer__start-time"><span>00</span> : <span>00</span> : <span>00</span></div>
           <button class="timer__btn-start btn">Start</button>
-          <button class="timer__btn-reset btn" disabled="disabled">Reset</button>
+          <button class="timer__btn-reset btn" disabled>Reset</button>
         </div>
         <div class="timer__info">
           <span class="timer__name">Timer 1</span>
@@ -30,34 +30,41 @@
           <button class="timer__edit btn">Edit</button>
         </div>
       </div>
-      <div class="timer__progres-line"></div>
+      <div class="timer__progres-line">
+        <div class="timer__line"></div>
+      </div>
     </div>
   </div>
 
-  <div class="edit-timer">
-    <div class="edit-timer__top">
-      <span class="edit-timer__title">Edit Timer</span>
-      <button class="edit-timer__btn-close">x</button>
-    </div>
-    <div class="edit-timer__main">
-      <div class="edit-timer__inst-time">
-        <input class="edit-time__hrs-time" type="number" value="0" min="0" max="99"> :
-        <input class="edit-time__mins-time" type="number" value="0" min="0" max="59"> :
-        <input class="edit-time__secs-time" type="number" value="0" min="0" max="59">
+
+  <div class="modal">
+    <div class="edit-timer">
+      <div class="edit-timer__wrapper">
+        <header class="edit-timer__top">
+          <span class="edit-timer__title">Edit Timer</span>
+          <button class="edit-timer__btn-close">x</button>
+        </header>
+        <main class="edit-timer__main">
+          <div class="edit-timer__inst-time">
+            <input class="edit-timer__hrs-time input" type="number" min="0" max="99"> :
+            <input class="edit-timer__mins-time input" type="number" min="0" max="59"> :
+            <input class="edit-timer__secs-time input" type="number" min="0" max="59">
+          </div>
+          <div class="edit-timer__name-inp">
+            <span class="edit-timer__hrs">Hrs</span>
+            <span class="edit-timer__mins">Mins</span>
+            <span class="edit-timer__secs">Secs</span>
+          </div>
+          <div class="edit-timer__line"></div>
+          <div class="edit-timer__timer-name">
+            <label class="edit-timer__name">Timer Name:</label>
+            <input class="edit-timer__name-input" type="text">
+          </div>
+        </main>
+        <footer class="edit-timer__footer">
+          <button class="edit-timer__btn-done">Done</button>
+        </footer>
       </div>
-      <div class="edit-timer__name-inp">
-        <span class="edit-timer__hrs">Hrs</span>
-        <span class="edit-timer__mins">Mins</span>
-        <span class="edit-timer__secs">Secs</span>
-      </div>
-      <div class="edit-timer__line"></div>
-      <div class="edit-timer__timer-name">
-        <label class="edit-timer__name">Timer Name:</label>
-        <input class="edit-timer__name-input" type="text">
-      </div>
-    </div>
-    <div class="edit-timer__footer">
-      <button class="edit-timer__btn-done">Done</button>
     </div>
   </div>
 
